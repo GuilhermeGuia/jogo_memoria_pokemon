@@ -1,0 +1,63 @@
+@import url("./resets.css");
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+}
+
+.login-jogar {
+  width: 90%;
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-header {
+  width: 90%;
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+.login-header img {
+  width: 100px;
+}
+
+.login-titulo {
+  font-size: 1.25rem;
+}
+
+.login-jogar .nome-jogador {
+  margin-top: 30px;
+  padding: 15px 20px;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  outline: 0;
+  border: 2px solid #222;
+  font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+}
+
+.btn-jogar {
+  padding: 15px 20px;
+  border: 0;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  color: #a6a6a6;
+  font-weight: bold;
+  font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+}
+
+.pointer {
+    cursor: pointer;
+}

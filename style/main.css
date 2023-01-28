@@ -1,0 +1,225 @@
+@import url("./resets.css");
+.container-game {
+  height: 100vh;
+  background-image: url("../img/fundo_principal.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-game {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header-game {
+  
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #fff;
+  padding: 20px;
+}
+
+.time {
+  font-size: 1.25rem;
+}
+.jogador-name {
+  font-size: 2rem;
+}
+
+.grid-cards {
+  width: 90%;
+  max-width: 960px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.card {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  aspect-ratio: 3/4;
+  border-radius: 5px;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+  border: 2px solid #222;
+}
+
+.green {
+  background-color: #d6ebdc;
+}
+.red {
+  background-color: #ffebca;
+}
+.blue {
+  background-color: #dfecf5;
+}
+.yellow {
+  background-color: #f5f2df;
+}
+.normal {
+  background-color: #e8e8e8;
+}
+
+.virado {
+  background-color: #fff;
+}
+
+.face {
+  border-radius: 5px;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back {
+  background-image: url("../img/card-1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: red;
+  /* background-image: url("../img/bulbasaur.png"); */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* .card:hover {
+  transform: rotateY(180deg);
+} */
+
+.modal-finalizar {
+
+  display: none;
+
+  z-index: 999;
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+
+}
+
+.modal {
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 5px;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  z-index: 999;
+
+  text-align: center;
+
+  background-color: #fff;
+}
+
+
+.modal.animar {
+  animation-name: slide;
+
+  animation-duration: 3s;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  align-items: center;
+}
+
+.opcoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+.opcoes span {
+  
+  padding: 20px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 1.5rem;
+  border-bottom: 5px solid #fff;
+}
+
+.opcoes span:hover {
+  cursor: pointer;
+  border-color: #222;
+}
+
+.revelar {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 700px) {
+  .cards {
+    height: auto;
+  }
+
+  .time {
+    font-size: 0.9rem;
+  }
+  .jogador-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .opcoes {
+    gap: 20px;
+  }
+  .modal-body h1 {
+    font-size: 1.5rem;
+  }
+  .modal-body h2 {
+    font-size: 1.2rem;
+  }
+  .modal-body h3 {
+    font-size: 1rem;
+  }
+
+}
+
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
